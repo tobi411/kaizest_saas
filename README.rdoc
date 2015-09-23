@@ -1,8 +1,8 @@
 == README
 
-Coder Manual Project 
-Subscription-based web application
-http://codermanual.com
+Coder Manual Project: 
+A Subscription-based web application 
+http://www.codermanual.com
 
 Things you may want to cover:
 
