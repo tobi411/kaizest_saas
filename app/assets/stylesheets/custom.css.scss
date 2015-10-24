@@ -9,7 +9,21 @@ body {
     background-color: #333C54;
 }
 
+.navbar{
+    margin-bottom: 0;
+}
+
 nav.navbar-inverse{
     background-color: rgba(0,0,0,0.4);
     border:0;
+}
+
+.jumbotron{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.container .jumbotron, .container-fluid .jumbotron{
+    border-radius:0;
 }
