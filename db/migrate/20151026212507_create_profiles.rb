@@ -7,7 +7,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :job_title
       t.string :phone_number
       t.string :contact_email
-      t.text :description #for larger chunks of text
+      t.text :description #used t.text for larger chunks of text
       t.timestamps
     end
   end
