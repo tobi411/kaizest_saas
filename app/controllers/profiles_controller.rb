@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController #Controllers should always be p
     end
     
     private 
-        def profile_parmas
+        def profile_params
             #whitelisting used to save data from forms to database and for safety
             params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description) 
         end
