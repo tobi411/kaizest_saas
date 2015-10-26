@@ -1,12 +1,12 @@
 class ProfilesController < ApplicationController #Controllers should always be pluralized
     def new
         @user = User.find(params[:user_id]) #find logged in user
-        @profile = @user.build_profile #because each user has a profile(as in routes.rb) we can call this method
+        @profile = @profile = Profile.new #not using @user.build_profile(profile_params) to avoid unlinking user to profile
     end
     
     def create
        @user = User.find( params[:user_id] )
-        @profile = @user.build_profile(profile_params)
+        @profile = @user.build_profile(profile_params) #because each user has a profile(as in routes.rb) we can call this method
         if @profile.save
           flash[:success] = "Profile Updated!"
           redirect_to user_path( params[:user_id] )
