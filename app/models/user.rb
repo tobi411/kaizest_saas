@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :plan
-  attr_accessor :stripe_card_token #allows us to use the hidden fiedl we had
+  has_one :profile
+  attr_accessor :stripe_card_token #allows us to use the hidden field we had
   def save_with_payment
     if valid? #if user input is valid
       customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
