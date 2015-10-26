@@ -11,12 +11,13 @@ class ProfilesController < ApplicationController #Controllers should always be p
           flash[:success] = "Profile Updated!"
           redirect_to user_path( params[:user_id] )
         else
-          render action: :new
+          render action: :new #render the new action and view
         end
     end
     
     private 
         def profile_parmas
-            params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description) #used for validation and avoiding XSS
+            #whitelisting used to save data from forms to database and for safety
+            params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description) 
         end
 end
