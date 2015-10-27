@@ -43,3 +43,32 @@ nav.navbar-inverse{
     border-color: #5e9cd1;
 }
 
+.job-title-icon{
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2e6da4;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #337ab7;
+    color: white;
+    text-align: center;
+}
+
+#user-profile{
+    color: #efefef;
+}
+
+#user-profile .well{
+    background-color: rgba(255,255,255,0.3);
+}
+
+#user-profile .well h3{
+    margin: 0 0 15px 0;
+}
+
+img#user-profile-pic{
+    width: 8em;
+    border-radius: 100%;
+    margin: 20px;
+    padding: 0 5px;
+}
