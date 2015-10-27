@@ -1,6 +1,11 @@
 <div class="jumbotron text-center">
     <h1>Welcome to DevMatch</h1>
     <h3>A membership site where entrepreneurs can meet developers</h3>
+    <% if !user_signed_in? %>
+        <p>Please read 
+         <%= link_to "about us", about_path %>       
+        before proceeding</p>
+    <% end %>
 </div>
 <div class="row">
     <% if user_signed_in? %>
