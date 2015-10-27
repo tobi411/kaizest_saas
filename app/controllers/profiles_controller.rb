@@ -15,6 +15,11 @@ class ProfilesController < ApplicationController #Controllers should always be p
         end
     end
     
+    def edit
+        @user = User.find( params[:user_id] )
+        @profile = @user.profile
+    end
+    
     private 
         def profile_params
             #whitelisting used to save data from forms to database and for safety
