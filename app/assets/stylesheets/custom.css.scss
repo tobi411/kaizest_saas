@@ -18,13 +18,7 @@ nav.navbar-inverse{
     border:0;
 }
 
-.jumbotron{
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-}
-
-#plan-type, #new-profile-info,#edit-profile-info {
+#plan-type, #new-profile-info,#edit-profile-info, #community-info {
     color: #efefef;
     margin-bottom: 20px;
 }
@@ -54,7 +48,7 @@ nav.navbar-inverse{
     text-align: center;
 }
 
-#user-profile, #user-account{
+#user-profile, #user-account, #contact-us-info, #about-us-info{
     color: #efefef;
 }
 
