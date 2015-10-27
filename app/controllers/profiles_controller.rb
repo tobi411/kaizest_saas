@@ -39,7 +39,7 @@ class ProfilesController < ApplicationController #Controllers should always be p
             params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description) 
         end
         def only_current_user
-          @user = User.find( params[:user_id] )
+          @user = User.find( params[:user_id] ) if User.exists?(params[:user_id]) 
           redirect_to(root_url) unless @user == current_user #if the user passed through the url is the current user, proceed. If not go back to the home page
         end
 end
