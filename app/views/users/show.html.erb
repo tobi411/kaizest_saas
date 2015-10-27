@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-3 text-center">
-    <%= image_tag @user.profile.avatar.url, :id => "user-profile-pic" %>
+    <% if @user.profile.avatar.file? %>
+      <%= image_tag @user.profile.avatar.url, :id => "user-profile-pic" %>
+    <% end %>
   </div>
   <idv class="col-md-6" id="user-profile">
     <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
